@@ -4,20 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent, AppBarComponent, NotesComponent, NoteCardComponent } from './retain';
+import { FeaturesModule } from './features/features.module';
+import { HomeComponent } from './retain/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AppBarComponent,
-    NotesComponent,
-    NoteCardComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    FeaturesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
