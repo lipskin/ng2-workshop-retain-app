@@ -17,6 +17,11 @@ export class NotesComponent {
   ];
 
   checkCard(note, i) {
-    this.notes.splice(i, 1)
+    this.notes.splice(i, 1);
   }
+
+  addNote(note) {
+    this.notes.push(note);
+  }
+
 }

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { isEmpty } from 'lodash';
 
 @Component({
   selector: 'rt-note-creator',
@@ -7,14 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoteCreatorComponent implements OnInit {
   isFocus: boolean = false;
-  newNote = {
+  note = {
     title: '',
     value: ''
   };
 
+  @Output() newNote = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  createNote() {
+    const { title, value } = this.note;
+    if (isEmpty(title) || isEmpty(value)) {
+      return false;
+    }
+
+    this.newNote.next({title, value});
+    return false;
   }
 
 }
