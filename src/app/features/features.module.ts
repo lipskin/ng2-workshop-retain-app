@@ -1,18 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 import { AppBarComponent } from './app-bar';
 import { NotesComponent } from './notes';
 import { NoteCardComponent } from './note-card';
 import { NoteCreatorComponent } from './note-creator/note-creator.component';
+import { SharedModule } from '../shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    RouterModule
+    SharedModule
   ],
   declarations: [
     AppBarComponent,
