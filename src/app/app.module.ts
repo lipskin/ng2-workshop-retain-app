@@ -1,26 +1,27 @@
-import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
-import { HomeComponent } from './retain/home.component';
+import { HomeComponent, AboutComponent } from './retain';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpModule,
-    FeaturesModule,
     CoreModule,
-    AppRoutingModule,
+    FeaturesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

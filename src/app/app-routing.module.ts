@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './retain';
+import { HomeComponent, AboutComponent } from './retain';
 
 const routeConfig: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
