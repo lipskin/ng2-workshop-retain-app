@@ -5,7 +5,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
   templateUrl: './note-card.component.html',
   styleUrls: ['./note-card.component.css']
 })
-export class  NoteCardComponent{
+export class  NoteCardComponent {
   @Input() note;
   @Output() checked = new EventEmitter();
 

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.css']
 })
-export class NotesComponent implements OnInit{
+export class NotesComponent implements OnInit {
   notes = [];
 
   constructor(private notesService: NotesService) {}
