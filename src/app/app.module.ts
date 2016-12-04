@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { FeaturesModule } from './features/features.module';
 import { SharedModule } from './shared.module';
-import { HomeComponent, AboutComponent } from './retain';
+import { HomeComponent, AboutComponent, AuthComponent } from './retain';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    AuthComponent
   ],
   imports: [
     SharedModule,

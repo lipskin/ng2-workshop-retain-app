@@ -5,6 +5,7 @@ import { NotesComponent } from './notes';
 import { NoteCardComponent } from './note-card';
 import { NoteCreatorComponent } from './note-creator/note-creator.component';
 import { SharedModule } from '../shared.module';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
 
 @NgModule({
   imports: [
@@ -14,13 +15,15 @@ import { SharedModule } from '../shared.module';
     AppBarComponent,
     NotesComponent,
     NoteCardComponent,
-    NoteCreatorComponent
+    NoteCreatorComponent,
+    MainLayoutComponent
   ],
   exports: [
     AppBarComponent,
     NotesComponent,
     NoteCardComponent,
-    NoteCreatorComponent
+    NoteCreatorComponent,
+    MainLayoutComponent
   ]
 })
 export class FeaturesModule { }
