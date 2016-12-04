@@ -11,7 +11,7 @@ var token = 'jwt_token';
 
 function isAuthorized(req) {
   authorization_token = 'Bearer ' + token;
-  if (req.headers.authorization === authorization_token) {
+  if ( req.path === '/auth' || req.headers.authorization === authorization_token) {
     return true;
   }
   return false;
