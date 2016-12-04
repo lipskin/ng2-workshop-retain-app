@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent, AboutComponent, AuthComponent } from './retain';
 import { MainLayoutComponent } from './features';
+import { AuthService } from './core/auth.service';
 
 const routeConfig: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
+    canActivate: [ AuthService ],
     children: [
       {
         path: '',

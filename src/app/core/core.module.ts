@@ -1,6 +1,7 @@
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 
+import { AuthService } from './auth.service';
 import { NotesService } from './notes.service';
 
 @NgModule({
@@ -8,7 +9,8 @@ import { NotesService } from './notes.service';
     HttpModule
   ],
   providers: [
-    NotesService
+    NotesService,
+    AuthService
   ]
 })
 export class CoreModule { }
