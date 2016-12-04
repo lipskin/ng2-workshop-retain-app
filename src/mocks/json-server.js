@@ -17,7 +17,7 @@ function isAuthorized(req) {
   return false;
 }
 
-server.get('/auth', function(req, res) {
+server.all('/auth', function(req, res) {
   return res.json({
     token: token
   })
