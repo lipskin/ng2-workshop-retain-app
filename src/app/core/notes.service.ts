@@ -17,7 +17,7 @@ export class NotesService {
     return this.http.post(this.apiUrl, note).map((res: Response ) => res.json());
   }
 
-  completeNote(note) {
-    return this.http.delete(`${this.apiUrl}/${note.id}`);
+  completeNote(noteID) {
+    return this.http.delete(`${this.apiUrl}/${noteID}`);
   }
 }
