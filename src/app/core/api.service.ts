@@ -16,8 +16,8 @@ export class ApiService {
     return this.http.get(`${this.apiUrl}${path}`);
   }
 
-  post(path: string, note) {
-    return this.http.post(`${this.apiUrl}${path}`, note);
+  post(path: string, data) {
+    return this.http.post(`${this.apiUrl}${path}`, data);
   }
 
   delete(path: string) {
