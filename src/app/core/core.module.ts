@@ -2,6 +2,7 @@ import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 
 import { AuthService } from './auth.service';
+import { ApiService } from './api.service';
 import { NotesService } from './notes.service';
 
 @NgModule({
@@ -10,6 +11,7 @@ import { NotesService } from './notes.service';
   ],
   providers: [
     NotesService,
+    ApiService,
     AuthService
   ]
 })
