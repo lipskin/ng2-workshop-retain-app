@@ -25,7 +25,6 @@ export class AuthComponent implements OnInit {
 
   authenticate() {
     this.authService.authenticate(this.user)
-      .subscribe(res => console.log(res));
-      // .subscribe(() => this.router.navigate(['']));
+      .subscribe(() => this.router.navigate(['']));
   }
 }

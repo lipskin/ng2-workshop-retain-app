@@ -1,12 +1,11 @@
 import { ApiService } from './api.service';
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Response } from '@angular/http';
 
-import { environment } from '../../environments/environment';
 
 @Injectable()
 export class NotesService {
-  url: string = `${environment.apiUrl}/notes`;
+  url: string = `/notes`;
 
   constructor(private apiService: ApiService) {}
 

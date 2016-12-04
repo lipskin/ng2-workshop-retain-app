@@ -9,7 +9,7 @@ import { ApiService } from './api.service';
 export class AuthService implements CanActivate {
   JWT_KEY: string = 'retain_token';
 
-  constructor(private apiService: ApiService,private router: Router) { }
+  constructor(private apiService: ApiService, private router: Router) { }
 
   signOut(): void {
     localStorage.removeItem(this.JWT_KEY);
@@ -18,8 +18,12 @@ export class AuthService implements CanActivate {
 
   setJWT(jwt: string): void {
     localStorage.setItem(this.JWT_KEY, jwt);
+  }
+
+  initApiHeader() {
+    const jwt = localStorage.getItem(this.JWT_KEY);
     this.apiService.setHeaders({
-        'Authorization': `Bearer ${jwt}`
+      'Authorization': `Bearer ${jwt}`
     });
   }
 
@@ -39,6 +43,8 @@ export class AuthService implements CanActivate {
     if (!isAuth) {
       this.router.navigate(['auth']);
     }
+
+    this.initApiHeader();
 
     return isAuth;
   }

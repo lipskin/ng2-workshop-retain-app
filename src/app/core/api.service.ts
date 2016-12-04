@@ -13,15 +13,15 @@ export class ApiService {
   constructor(private http: Http) {}
 
   get(path: string) {
-    return this.http.get(`${this.apiUrl}${path}`);
+    return this.http.get(`${this.apiUrl}${path}`, { headers: this.headers});
   }
 
   post(path: string, data) {
-    return this.http.post(`${this.apiUrl}${path}`, data);
+    return this.http.post(`${this.apiUrl}${path}`, data, { headers: this.headers});
   }
 
   delete(path: string) {
-    return this.http.delete(`${this.apiUrl}${path}`);
+    return this.http.delete(`${this.apiUrl}${path}`, { headers: this.headers});
   }
 
   setHeaders(headers: { [key: string]: string }) {
